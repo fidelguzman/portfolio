@@ -34,11 +34,17 @@
     </div>
     <div class="hero">
       <div class="content">
-        <h1>Full Stack Developer</h1>
+        <h1 class="stagger1">Full Stack Developer</h1>
         <div class="meet">
-          <p>Meet Fidel Guzman</p>
+          <p class="stagger1">Meet Fidel Guzman</p>
         </div>
-        <svg width="36" height="66" viewBox="0 0 36 66" fill="none">
+        <svg
+          class="stagger1"
+          width="36"
+          height="66"
+          viewBox="0 0 36 66"
+          fill="none"
+        >
           <rect
             x="3"
             y="3"
@@ -190,5 +196,47 @@
       </div>
       <p class="credits">© Fidel Guzman 2021</p>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+      integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      var tl = gsap.timeline();
+
+      tl.from(".content", {
+        y: "-30%",
+        opacity: 0,
+        duration: 2,
+        ease: "power4.out",
+      });
+      tl.from(
+        ".stagger1",
+        {
+          y: "-50%",
+          opacity: 0,
+          duration: 2,
+          ease: "power4.out",
+          stagger: 0.3,
+        },
+        "-=1.5"
+      );
+      tl.from(
+        ".hero-design",
+        {
+          opacity: 0,
+          y: 50,
+          ease: "power4.out",
+          duration: 1,
+        },
+        "-=2"
+      );
+    </script>
   </body>
 </html>
