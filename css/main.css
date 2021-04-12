@@ -58,6 +58,10 @@ header ul a {
   display: none;
 }
 
+.social-header a :hover img {
+  fill: #ffd369;
+}
+
 .hero {
   background-color: #393e46;
   color: #eeeeee;
@@ -153,6 +157,10 @@ section {
 
 .footer-icon {
   fill: #eeeeee;
+}
+
+.footer-a:hover {
+  color: #ffd369;
 }
 
 .credits {
@@ -295,6 +303,24 @@ button a {
   }
   .hero .content {
     padding: 9em 20em 6em 20em;
+  }
+}
+
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnim {
+  to {
+    -webkit-transform: translateY(26px);
+            transform: translateY(26px);
+  }
+}
+
+@keyframes circleAnim {
+  to {
+    -webkit-transform: translateY(26px);
+            transform: translateY(26px);
   }
 }
 /*# sourceMappingURL=main.css.map */

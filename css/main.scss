@@ -44,6 +44,11 @@ header {
 .hero-design {
   display: none;
 }
+.social-header a :hover {
+  img {
+    fill: #ffd369;
+  }
+}
 .hero {
   background-color: #393e46;
   color: #eeeeee;
@@ -117,6 +122,9 @@ section {
 }
 .footer-icon {
   fill: #eeeeee;
+}
+.footer-a:hover {
+  color: #ffd369;
 }
 .credits {
   margin: 0;
@@ -239,5 +247,13 @@ button {
   }
   .hero .content {
     padding: 9em 20em 6em 20em;
+  }
+}
+.circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+@keyframes circleAnim {
+  to {
+    transform: translateY(26px);
   }
 }
