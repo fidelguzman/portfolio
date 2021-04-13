@@ -63,13 +63,44 @@
         height="477"
         viewBox="0 0 480 477"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <rect x="240" width="120" height="120" rx="15" fill="#393E46" />
-        <rect x="240" y="240" width="120" height="120" rx="15" fill="#393E46" />
-        <rect x="120" y="120" width="120" height="120" rx="15" fill="#EEEEEE" />
-        <rect x="120" y="357" width="120" height="120" rx="15" fill="#EEEEEE" />
         <rect
+          class="square-anim"
+          x="240"
+          width="120"
+          height="120"
+          rx="15"
+          fill="#393E46"
+        />
+        <rect
+          class="square-anim"
+          x="240"
+          y="240"
+          width="120"
+          height="120"
+          rx="15"
+          fill="#393E46"
+        />
+        <rect
+          class="square-anim"
+          x="120"
+          y="120"
+          width="120"
+          height="120"
+          rx="15"
+          fill="#EEEEEE"
+        />
+        <rect
+          class="square-anim"
+          x="120"
+          y="357"
+          width="120"
+          height="120"
+          rx="15"
+          fill="#EEEEEE"
+        />
+        <rect
+          class="square-anim"
           x="360"
           y="120"
           width="120"
@@ -78,9 +109,16 @@
           fill="#393E46"
           fill-opacity="0.5"
         />
-        <rect y="240" width="120" height="120" rx="15" fill="#51565F" />
-        <circle cx="300" cy="180" r="60" fill="#FFD369" />
-        <circle cx="180" cy="300" r="60" fill="#FFD369" />
+        <rect
+          class="square-anim"
+          y="240"
+          width="120"
+          height="120"
+          rx="15"
+          fill="#51565F"
+        />
+        <circle class="square-anim" cx="300" cy="180" r="60" fill="#FFD369" />
+        <circle class="square-anim" cx="180" cy="300" r="60" fill="#FFD369" />
       </svg>
     </div>
     <section class="portfolio">
@@ -237,6 +275,32 @@
         },
         "-=2"
       );
+      gsap.from(".square-anim", {
+        stagger: 0.2,
+        scale: 0.1,
+        duration: 1,
+        ease: "power4.out.config(1.7)",
+      });
+      gsap.from(".transition2", {
+        scrollTrigger: {
+          trigger: ".transition2",
+          start: "top bottom",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.3,
+      });
+      gsap.from(".transition3", {
+        scrollTrigger: {
+          trigger: ".transition3",
+          start: "top bottom",
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.6,
+      });
     </script>
   </body>
 </html>
