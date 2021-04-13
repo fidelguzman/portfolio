@@ -44,8 +44,8 @@ header {
 .hero-design {
   display: none;
 }
-.social-header a :hover {
-  img {
+.social-header a:hover {
+  svg {
     fill: #ffd369;
   }
 }
@@ -120,11 +120,10 @@ section {
     padding: 1em 1em 0;
   }
 }
-.footer-icon {
-  fill: #eeeeee;
-}
 .footer-a:hover {
-  color: #ffd369;
+  svg {
+    fill: #ffd369;
+  }
 }
 .credits {
   margin: 0;
@@ -133,14 +132,16 @@ section {
   color: #eeeeee;
   font-weight: lighter;
 }
-button {
+.button {
+  display: inline-block;
   border-radius: 2em;
   background-color: #ffd369;
   border-style: none;
-  padding: 1em;
-  a {
-    color: #222831;
-  }
+  padding: 0.5em 1em;
+  color: #222831;
+}
+.button:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media only screen and (min-width: 800px) {
